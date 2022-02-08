@@ -1,0 +1,46 @@
+.App {
+    margin: 0 auto;
+    background: white;
+    max-width: 80%;
+    box-shadow: inset 0 0 7px -1px, 0 0 15px -2px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    width: 100%;
+    box-shadow: inset 0 8px 7px -1px;
+    background: white;
+    margin-bottom: 100px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: #c19a69;
+    border: 2px solid #a18257;
+    box-shadow: inset 0 0 5px -3px white;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 15px;
+}
+
+.web-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.logo-name {
+    margin: 0;
+    text-decoration: none;
+}
+
+.add {
+    /*margin-right: 10px;*/
+}

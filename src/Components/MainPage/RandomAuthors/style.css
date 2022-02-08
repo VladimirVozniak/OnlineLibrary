@@ -1,0 +1,18 @@
+.random-authors {
+    width: 100%;
+    margin: 20px 0 40px;
+}
+
+.authors-feed {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background: gray;
+}
+
+input {
+    display: none;
+    margin: 0;
+    width: 0;
+    height: 0;
+}
