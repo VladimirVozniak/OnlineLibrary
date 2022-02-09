@@ -1,3 +1,54 @@
 p {
     color: black
 }
+
+.cover {
+    background: gray;
+    width: 105px;
+    height: 165px;
+    margin: 0 10px;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 180px;
+}
+
+.book-title {
+    margin-top: 0;
+}
+
+.book button{
+    margin-right: 5px;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-read {
+    background: lightgreen;
+}
+
+.button-read:hover {
+    background: #00c100;
+}
+
+.button-edit {
+    background: lightyellow;
+}
+
+.button-edit:hover {
+    background: #ffe433;
+}
+
+.button-delete {
+    background: #ff9696;
+}
+
+.button-delete:hover {
+    background: #ff5252;
+}

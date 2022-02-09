@@ -10,7 +10,7 @@
     background: gray;
 }
 
-input {
+input[type=radio] {
     display: none;
     margin: 0;
     width: 0;

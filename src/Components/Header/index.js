@@ -2,7 +2,7 @@ export const Header = () => {
     return (
         <header>
             <div className="header">
-                <a href="#" className="web-logo">
+                <a href="/" className="web-logo">
                     <img className="logo"/>
                     <p className="logo-name">Виртуальная библиотека</p>
                 </a>
