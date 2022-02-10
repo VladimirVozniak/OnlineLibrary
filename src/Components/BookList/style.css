@@ -2,6 +2,21 @@ p {
     color: black
 }
 
+.container1 a p {
+    color: gray
+}
+
+.book-author a {
+    color: gray;
+    border-bottom: 1px solid rgba(128, 128, 128, 0);
+    transition: 0.1s ease-in-out;
+}
+
+.book-author a:hover {
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
 .cover {
     background: gray;
     width: 105px;
@@ -9,7 +24,7 @@ p {
     margin: 0 10px;
 }
 
-.book {
+.book-list-item {
     display: flex;
     align-items: center;
     width: 450px;
@@ -20,7 +35,7 @@ p {
     margin-top: 0;
 }
 
-.book button{
+.book button {
     margin-right: 5px;
 }
 
@@ -31,6 +46,11 @@ p {
 
 .button-read {
     background: lightgreen;
+    color: black
+}
+
+.container1 button {
+    margin-right: 5px;
 }
 
 .button-read:hover {
@@ -39,6 +59,7 @@ p {
 
 .button-edit {
     background: lightyellow;
+    color: black
 }
 
 .button-edit:hover {

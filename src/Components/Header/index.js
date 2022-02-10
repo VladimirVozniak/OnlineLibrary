@@ -6,7 +6,7 @@ export const Header = () => {
                     <img className="logo"/>
                     <p className="logo-name">Виртуальная библиотека</p>
                 </a>
-                <a className="add" href="#">Добавить автора/книгу</a>
+                {/*<a className="add" href="#">Добавить автора/книгу</a>*/}
             </div>
         </header>
     )

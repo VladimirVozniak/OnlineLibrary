@@ -1,10 +1,9 @@
-import {useState} from "react";
-import "./style.css"
 import {Link, useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
 import {updateBook} from "../../../API/bookActions";
+import {useDispatch, useSelector} from "react-redux";
+import {useState} from "react";
 
-export const BookEdit = () => {
+export const BookAdd = () => {
     const books = useSelector(state => state.books.bookList)
     const authors = useSelector(state => state.authors.authorList)
     const params = useParams()
@@ -12,9 +11,9 @@ export const BookEdit = () => {
     const dispatch = useDispatch()
 
     const editingBook = books.find(book => book.id === prodId)
-    const [title, setTitle] = useState(editingBook.title);
-    const [author, setAuthor] = useState(editingBook.author_id);
-    const [date, setDate] = useState(editingBook.year);
+    const [title, setTitle] = useState('');
+    const [author, setAuthor] = useState(null);
+    const [date, setDate] = useState(Date.now());
 
     return (
         <div className="book">

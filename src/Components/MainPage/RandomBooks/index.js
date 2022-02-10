@@ -13,7 +13,7 @@ export const RandomBooks = () => {
 
     return (
         <div className="random-books_container">
-            <a className="all-books" href="/BookList">Всего книг: {allBooks} >></a>
+            <a className="all-books" href="/books">Всего книг: {allBooks} >></a>
             {/*<div className="background"/>*/}
             {/*<img className="background" src='https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/9c102dfb-6bd5-469b-94e1-cb8b109c0aeb/300x450'/>*/}
             <div className="random-books_info">
