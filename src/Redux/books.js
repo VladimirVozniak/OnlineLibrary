@@ -24,6 +24,15 @@ const toolkitSlice = createSlice({
         }]
     },
     reducers: {
+        addBook(state, action) {
+            state.bookList.push({
+                id: Math.floor(Math.random() * 1000000000),
+                title: action.payload.title,
+                author_id: action.payload.author_id,
+                created_at: new Date().getDate(),
+                year: action.payload.year
+            })
+        },
         editPropertyBook(state, action) {
             state.bookList = state.bookList.map(elem => elem.id === action.payload.bookId ? {
                 ...elem,
@@ -34,9 +43,12 @@ const toolkitSlice = createSlice({
         },
         removeBook(state, action) {
             state.bookList = state.bookList.filter(book => book.id !== action.payload)
+        },
+        removeBooksAuthor(state, action) {
+            state.bookList = state.bookList.filter(book => book.author_id !== action.payload)
         }
     }
 })
 
-export const {editPropertyBook, removeBook} = toolkitSlice.actions
+export const {addBook, editPropertyBook, removeBook,removeBooksAuthor} = toolkitSlice.actions
 export default toolkitSlice.reducer

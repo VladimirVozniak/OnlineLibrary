@@ -1,13 +1,19 @@
-import {editPropertyBook, removeBook} from "../Redux/books";
+import {addBook, editPropertyBook, removeBook} from "../Redux/books";
 
-export const deleteBook = (bookID) => {
+export const appendBook = (title, author_id, year) => {
     return dispatch => {
-        dispatch(removeBook(bookID));
+        dispatch(addBook({title, author_id, year}))
     }
 }
 
 export const updateBook = (bookId, title, author_id, year) => {
     return dispatch => {
         dispatch(editPropertyBook({bookId, title, author_id, year}))
+    }
+}
+
+export const deleteBook = (bookID) => {
+    return dispatch => {
+        dispatch(removeBook(bookID));
     }
 }

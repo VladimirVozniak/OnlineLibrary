@@ -1,0 +1,81 @@
+.container2 a p {
+    color: gray
+}
+
+.container2 button {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.book-author a {
+    color: gray;
+    border-bottom: 1px solid rgba(128, 128, 128, 0);
+    transition: 0.1s ease-in-out;
+}
+
+.book-author a:hover {
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.cover {
+    width: 100px;
+    height: 100px;
+    background: gray;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin: 0 10px;
+}
+
+.author-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: 250px;
+    margin:10px 20px
+}
+
+.book-title {
+    margin-top: 0;
+}
+
+.book button {
+    margin-right: 5px;
+}
+
+.author-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-read {
+    background: lightgreen;
+    color: black
+}
+
+.container2 button {
+    display: block;
+    margin-right: 5px;
+}
+
+.button-read:hover {
+    background: #00c100;
+}
+
+.button-edit {
+    background: lightyellow;
+    color: black
+}
+
+.button-edit:hover {
+    background: #ffe433;
+}
+
+.button-delete {
+    background: #ff9696;
+}
+
+.button-delete:hover {
+    background: #ff5252;
+}

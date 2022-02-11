@@ -5,15 +5,16 @@ import "swiper/css/pagination";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {EffectCards, Mousewheel, Pagination} from "swiper";
 import {useState} from "react";
+import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 export const RandomBooks = () => {
-    const [allBooks, setAllBooks] = useState(166);
+    const allBooks = useSelector(state => state.books.bookList)
     const [currentCard, setCurrentCard] = useState(0);
-    // console.log(currentCard)
 
     return (
         <div className="random-books_container">
-            <a className="all-books" href="/books">Всего книг: {allBooks} >></a>
+            <Link className="all-books" to="/books">Всего книг: {allBooks.length} >></Link>
             {/*<div className="background"/>*/}
             {/*<img className="background" src='https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/9c102dfb-6bd5-469b-94e1-cb8b109c0aeb/300x450'/>*/}
             <div className="random-books_info">

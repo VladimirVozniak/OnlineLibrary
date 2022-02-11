@@ -1,0 +1,40 @@
+
+.book {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto 70px;
+}
+
+.book-edit {
+    display: flex;
+    align-items: center;
+}
+
+.qwe {
+    display: flex;
+    flex-direction: column;
+}
+
+.qwe input {
+    margin: 5px 0
+}
+
+.img-edit {
+    display: flex;
+    flex-direction: column;
+}
+
+.cover {
+    margin-bottom: 10px;
+}
+
+.apply-button, .cancel-button {
+    margin-top: 10px;
+    width: fit-content;
+    color: black
+}
+
+.edit-button {
+    display: block;
+}

@@ -14,18 +14,25 @@ const toolkitSlice = createSlice({
         }]
     },
     reducers: {
+        addAuthor(state, action) {
+            state.authorList.push({
+                id: Math.floor(Math.random() * 1000000000),
+                first_name: action.payload.first_name,
+                last_name: action.payload.last_name
+            })
+        },
         editPropertyAuthor(state, action) {
-            state.authorList = state.authorList.map(elem => elem.id === action.payload.id ? {
+            state.authorList = state.authorList.map(elem => elem.id === action.payload.authorId ? {
                 ...elem,
                 first_name: action.payload.first_name,
                 last_name: action.payload.last_name
             } : elem)
         },
         removeAuthor(state, action) {
-            state.authorList = state.authorList.filter(book => book.id !== action.payload)
+            state.authorList = state.authorList.filter(author => author.id !== action.payload)
         }
     }
 })
 
-export const {editPropertyAuthor, removeAuthor} = toolkitSlice.actions
+export const {addAuthor, editPropertyAuthor, removeAuthor} = toolkitSlice.actions
 export default toolkitSlice.reducer

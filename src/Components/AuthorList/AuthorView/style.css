@@ -1,0 +1,14 @@
+.view-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.view-book .book-title {
+    text-align: center
+}
+
+.view-book button {
+    color: black;
+    margin-bottom: 10px;
+}
