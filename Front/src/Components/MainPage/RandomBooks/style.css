@@ -10,9 +10,19 @@
     overflow: hidden;
 }
 
+.shift-right {
+    margin: 0 0 10px auto;
+}
+
+.refresh-books {
+    width: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .all-books {
     color: rgba(255, 255, 255, 0.5);
-    margin: 0 20px 15px auto;
+    margin: 0 20px 15px 0;
     font-size: 0.8rem;
     transition: 0.1s ease-in-out;
 }
@@ -138,6 +148,15 @@
     font-size: 15px
 }
 
-.swiper-slide {
-    background: center/cover no-repeat url('https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/9c102dfb-6bd5-469b-94e1-cb8b109c0aeb/300x450');
+.cover-loaded {
+    width: 220px;
+}
+
+.cover-unload {
+    width: 220px;
+    height: 320px;
+    text-align: center;
+    padding-top: 70%;
+    background: gray;
+    color: white
 }

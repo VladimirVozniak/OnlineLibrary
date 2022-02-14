@@ -12,26 +12,43 @@ import {AuthorList} from "./Components/AuthorList";
 import {AuthorAdd} from "./Components/AuthorList/AuthorAdd";
 import {AuthorEdit} from "./Components/AuthorList/AuthorEdit";
 import {AuthorView} from "./Components/AuthorList/AuthorView";
+import {useEffect, useState} from "react";
+import {useDispatch} from "react-redux";
+import {getAuthors} from "./API/authorActions";
+import {getBooks} from "./API/bookActions";
 
 function App() {
-    return (
-        <div className="App">
-            <Header/>
-            <Routes>
-                <Route path="/home" element={<MainPage/>}/>
-                <Route path="/books" element={<BookList/>}/>
-                <Route path="/books/add" element={<BookAdd/>}/>
-                <Route path="/books/edit=:id" element={<BookEdit/>}/>
-                <Route path="/books/view=:id" element={<BookView/>}/>
-                <Route path="/authors" element={<AuthorList/>}/>
-                <Route path="/authors/add" element={<AuthorAdd/>}/>
-                <Route path="/authors/edit=:id" element={<AuthorEdit/>}/>
-                <Route path="/authors/view=:id" element={<AuthorView/>}/>
-                <Route path="*" element={<Navigate to="/home"/>}/>
-            </Routes>
-            <Footer/>
-        </div>
-    );
+  const [loaded, setLoaded] = useState(false);
+  const dispatch = useDispatch()
+
+  useEffect(async () => {
+    await dispatch(getAuthors())
+    await dispatch(getBooks())
+    setLoaded(true)
+  }, [])
+
+  return (
+    <>
+      {loaded &&
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path="/home" element={<MainPage/>}/>
+          <Route path="/books" element={<BookList/>}/>
+          <Route path="/books/add" element={<BookAdd/>}/>
+          <Route path="/books/edit=:id" element={<BookEdit/>}/>
+          <Route path="/books/view=:id" element={<BookView/>}/>
+          <Route path="/authors" element={<AuthorList/>}/>
+          <Route path="/authors/add" element={<AuthorAdd/>}/>
+          <Route path="/authors/edit=:id" element={<AuthorEdit/>}/>
+          <Route path="/authors/view=:id" element={<AuthorView/>}/>
+          <Route path="*" element={<Navigate to="/home"/>}/>
+        </Routes>
+        <Footer/>
+      </div>
+      }
+    </>
+  )
 }
 
 export default App;

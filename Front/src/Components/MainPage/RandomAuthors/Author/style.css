@@ -23,7 +23,7 @@
 .author-img {
     width: 100px;
     height: 100px;
-    background:url('https://vokrug.tv/pic/news/9/c/3/9/9c391010048416fbab578769a5076565.jpg') center/cover no-repeat;
+    background: url('https://vokrug.tv/pic/news/9/c/3/9/9c391010048416fbab578769a5076565.jpg') center/cover no-repeat;
     max-width: 100px;
     max-height: 100px;
     /*object-fit: cover*/
