@@ -8,6 +8,8 @@ export const AuthorList = () => {
     const authors = useSelector(state => state.authors.authorList)
     const dispatch = useDispatch()
 
+    console.log({authors})
+
     return (
         <>
             <Link to="/authors/add">

@@ -22,7 +22,7 @@ const toolkitSlice = createSlice({
             } : elem)
         },
         removeAuthor(state, action) {
-            state.authorList = state.authorList.filter(author => author.id !== action.payload)
+            state.authorList = state.authorList.filter(author => author._id !== action.payload)
         }
     }
 })

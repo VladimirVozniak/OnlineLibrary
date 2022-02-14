@@ -45,8 +45,8 @@ export const deleteAuthor = (authorId) => {
         try {
             await axios.post("http://localhost:3001/deleteAuthor", {_id: authorId})
 
-            dispatch(removeAuthor(authorId._id));
-            dispatch(removeBooksAuthor(authorId._id))
+            dispatch(removeAuthor(authorId));
+            dispatch(removeBooksAuthor(authorId))
         } catch (e) {
             console.log(e)
         }
