@@ -1,7 +1,7 @@
+import './style.css'
 import {Link} from "react-router-dom";
 
 export const Header = () => {
-
   return (
     <header>
       <div className="header">
@@ -9,7 +9,8 @@ export const Header = () => {
           <img className="logo"/>
           <p className="logo-name">Виртуальная библиотека</p>
         </Link>
-        {/*<a className="add" href="#">Добавить автора/книгу</a>*/}
+        <Link className='header-link' to="/books">Все книги</Link>
+        <Link className='header-link' to="/authors">Все Авторы</Link>
       </div>
     </header>
   )

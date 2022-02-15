@@ -10,6 +10,7 @@ export const AuthorList = () => {
 
   return (
     <>
+      <h1 className='title-page'>Список авторов</h1>
       <Link to="/authors/add">
         <button className="button-add">Добавить</button>
       </Link>

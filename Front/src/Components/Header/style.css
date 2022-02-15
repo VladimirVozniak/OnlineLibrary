@@ -1,0 +1,10 @@
+.header-link {
+    color: black;
+    margin-left: 10px;
+    padding-left: 8px;
+    border-left: 1px solid black;
+}
+
+.header-link:hover{
+    color: #6f6f6f
+}

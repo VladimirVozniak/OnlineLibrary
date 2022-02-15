@@ -1,10 +1,6 @@
 .author-icon {
     height: 100%;
     margin: 5px;
-    border: 2px solid white;
-    border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 0 1px 0 white inset, 0 0 1px 0 white;
     cursor: pointer;
     max-width: 100px;
     max-height: 100px;
@@ -17,14 +13,19 @@
     overflow: hidden;
     box-shadow: 0 0 1px 0 goldenrod inset, 0 0 1px 0 goldenrod;
     cursor: pointer;
-
 }
 
 .author-img {
     width: 100px;
     height: 100px;
-    background: url('https://vokrug.tv/pic/news/9/c/3/9/9c391010048416fbab578769a5076565.jpg') center/cover no-repeat;
+    box-shadow: 0 0 1px 0 white inset, 0 0 1px 0 white;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: url('https://b-tm.com.ua/assets/galleries/105/noimage.png') center/cover no-repeat;
     max-width: 100px;
     max-height: 100px;
-    /*object-fit: cover*/
+}
+
+.author-icon p {
+    text-align: center;
 }

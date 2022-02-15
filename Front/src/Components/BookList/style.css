@@ -2,6 +2,31 @@ p {
     color: black
 }
 
+.empty {
+    text-align: center;
+}
+
+.link-add {
+    color: grey;
+    animation: blink 1s infinite alternate;
+    transition: 0.5s ease-in-out;
+}
+
+
+@keyframes blink {
+    0% {
+        color: grey;
+    }
+    100% {
+        color: black;
+    }
+}
+
+.link-add:hover {
+    color: #ff4c4c;
+    animation: none;
+}
+
 .container1 a p {
     color: gray
 }

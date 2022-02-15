@@ -22,12 +22,14 @@ export const appendBook = (title, author_id, year) => {
 
       await axios.post("http://localhost:3001/createBook", {title, author_id, year})
       dispatch(addBook({title, author_id, year}))
-      document.location.href ='/books'
+      document.location.href = "/books"
     } catch (e) {
       if (e.message === "warning")
         message.warning("Не выбран автор или пустое название книги");
-      else
+      else {
         message.error("Ошибка сервера");
+        console.log(e)
+      }
     }
   }
 }

@@ -11,6 +11,14 @@ export const BookList = () => {
 
   return (
     <>
+      <h1 className="title-page">Список книг</h1>
+      {bookList &&
+      <p className='empty'>Пусто ;(
+        <br/>
+        <Link to="/books/add">
+          <p className="link-add">Добавить первую книгу</p>
+        </Link>
+      </p>}
       <Link to="/books/add">
         <button className="button-add">Добавить</button>
       </Link>

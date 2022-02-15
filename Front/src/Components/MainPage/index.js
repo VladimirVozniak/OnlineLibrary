@@ -6,12 +6,14 @@ import {useSelector} from "react-redux";
 
 export const MainPage = () => {
   const allBooks = useSelector(state => state.books.bookList)
+  const allAuthors = useSelector(state => state.authors.authorList)
+  const [randomAuthors, setRandomAuthors] = useState(randomElement(allAuthors))
   const [randomBooks, setRandomBooks] = useState(randomElement(allBooks))
 
   return (
     <>
       <RandomBooks randomBooks={randomBooks} refresh={()=>setRandomBooks(randomElement(allBooks))}/>
-      <RandomAuthors/>
+      <RandomAuthors randomAuthors={randomAuthors} refresh={()=>setRandomAuthors(randomElement(allAuthors))}/>
     </>
   )
 }

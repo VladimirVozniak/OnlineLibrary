@@ -10,8 +10,10 @@ export const BookAdd = () => {
   const [date, setDate] = useState(Date.now());
   const dispatch = useDispatch()
 
+
   return (
     <div className="book">
+      {/*{qwe && <Navigate to="/books" replace={true}/>}*/}
       <div className="book-edit">
         <div className="img-edit">
           <img className="cover"/>
@@ -31,11 +33,9 @@ export const BookAdd = () => {
         </div>
       </div>
       <div className="edit-button">
-        {/*<Link to="/books">*/}
-          <button className="apply-button"
-                  onClick={() => dispatch(appendBook(title, author, date))}>Добавить
-          </button>
-        {/*</Link>*/}
+        <button className="apply-button"
+                onClick={() => dispatch(appendBook(title, author, date))}>Добавить
+        </button>
         <Link to="/books">
           <button className="cancel-button">Отмена</button>
         </Link>
